@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*, *::before, *::after {
+    box-sizing: border-box;
   }
+  
+:root {
+  --white: #FFFFFF;
+  --off-white: #eeeeee;
+  --black: #161619;
+  --dark-grey: #282d4b;
+  --blue: #5093E2;
+  --orange: #ff8f3e;
+  --light-grey: #DCDCDC;
+
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-bold: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Card */
+.card {
+  flex-direction: column;
+  width: 317px;
+  background-color: var(--off-white);
+  margin: 2.5em auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 6px var(--light-grey);
 }
+
+/* Info Section */
+.info--img {
+  width: inherit;
+  height: 330px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.info--text {
+  text-align: center;
+  margin: 1.2em auto;
+}
+
+.info--text_name {
+  font-size: 1.95rem;
+}
+
+.info--text_title {
+  font-size: 0.8rem;
+  font-weight: var(--fw-reg);
+  color: var(--orange);
+  margin-bottom: 0.3em;
+}
+
+.info--text_website {
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-size: 0.7rem;
+}
+
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  cursor: pointer;
+  /* padding: 0.5em 1.2em; */
+  text-decoration: none;
+  font-weight: var(--fw-med);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease-out;
+  width: 100px;
+  height: 30px;
+}
+
+.btn:nth-child(1) {
+  margin-left: 0.5em;
+}
+
+.btn:hover {
+  transform: scale(1.09);
+}
+
+.btn-icon {
+  margin-right: 0.5em;
+}
+
+
+/* Button Colors & Styles */
+.btn--white {
+  background-color: var(--light-grey);
+  color: var(--dark-grey);
+  border: none;
+}
+
+.btn--blue {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+}
+
+
+/* About & Interests*/
+.about {
+  margin: 2em auto;
+}
+
+.interests {
+  margin-bottom: 2em;
+}
+
+.about h2, 
+.interests h2 {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.about p, 
+.interests p {
+  color: var(--dark-grey);
+  font-size: 0.7rem;
+  line-height: 16px;
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 1em 0;
+  background: var(--light-grey);
+  border-radius: 0 0 10px 10px;
+}
+
+.footer-link {
+  color: var(--dark-grey);  
+}
+
+.footer-link:hover, .footer-link:active {
+  color: var(--white);
+}
+
+.footer-icon {
+  margin: 0 0.5em;
+  font-size: 25px;
+}
+  
